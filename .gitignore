@@ -1,0 +1,10 @@
+# virtual envs
+env/
+venv/
+
+# caches
+__pycache__/
+*.pyc
+
+# others
+*.jpg
