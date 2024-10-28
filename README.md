@@ -53,3 +53,7 @@ This section covers the very basics of the threading, multiprocessing, memory an
         - Main Thread: Program Thread: ``threading.main_thread()``
         - Thread naming: ``threading.current_thread().name``, construct thread name initialization.
 
+- [9. Synchronization Primitives](./References/Section1/Threads%20In%20Python/Synchronization/)
+
+    - [9.1. Synchronization between Threads ](./References/Section1/Threads%20In%20Python/Synchronization/Synchronization%20Between%20Threads.md)
+        - Dining philosopher problem and deadlock
