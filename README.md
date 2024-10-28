@@ -34,4 +34,22 @@ This section covers the very basics of the threading, multiprocessing, memory an
 - [7. Memory Architecture](./References/Section1/7.%20Memory%20Architecture.md)
     - Unified Memory Access
     - Non Unified Memory Access
+
+- [8. Threading in Python](./References/Section1/Threads%20In%20Python/)
+
+    - [8.1. Intro To Thread in Python](./References/Section1/Threads%20In%20Python/1.%20Threads%20in%20Python.md)
+        - Python threading module constructor params.
+        - Thread States
+        - Thread State Transition, Example with Code
+
+    - [8.2. Starting A Thread](./References/Section1/Threads%20In%20Python/2.%20Starting%20A%20Thread.md)
+        - Class Based Initialization Of Thread
+        - Process Forking, Example
+        - Daemon Thread, Usage, Example
     
+    - [8.3. Handling Threads in Python](./References/Section1/Threads%20In%20Python/3.%20Handling%20threads.md)
+        - Listing active threads objects: ``threading.enumerate()``
+        - Get current thread: ``threading.current_thread()``
+        - Main Thread: Program Thread: ``threading.main_thread()``
+        - Thread naming: ``threading.current_thread().name``, construct thread name initialization.
+
