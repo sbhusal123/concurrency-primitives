@@ -68,3 +68,5 @@ This section covers the very basics of the threading, multiprocessing, memory an
         - threading.Lock
         - threading.RLock
         - Lock vs RLock
+
+    - [9.4. Conditions and Semaphores](./References/Section1/Threads%20In%20Python/Synchronization/4.%20Conditions%20and%20Semaphores.md)
