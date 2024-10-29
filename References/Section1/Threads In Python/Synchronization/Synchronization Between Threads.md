@@ -97,7 +97,7 @@ philosopher5.join()
 
 ```
 
-Here we have 5 philosopher, and 5 forks as RLock, in the tun method we have:
+Here we have 5 philosopher, and 5 forks as RLock, in the run method we have:
 
 - first acquire left fork
 - Then try to acquire right fork
@@ -130,3 +130,8 @@ Philosopher1 has accquired left fork.
 Philosopher5 has accquired left fork.
 Philosopher4 has accquired left fork.
 ```
+
+>  Race Condition:  A race condition occurs when multiple processes or threads access shared resources concurrently, leading to unpredictable outcomes due to timing, potentially causing data corruption or unexpected behavior. Above example of Dining philosopher is also an example of race condition.
+
+> Race condition is a significant problem in concurrent programming. The condition occurs when one thread tries to modify a shared resource at the same time that another thread is modifying that resource – t​his leads to garbled output, which is why threads need to be synchronized.
+

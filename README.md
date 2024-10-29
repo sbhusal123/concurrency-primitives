@@ -55,5 +55,21 @@ This section covers the very basics of the threading, multiprocessing, memory an
 
 - [9. Synchronization Primitives](./References/Section1/Threads%20In%20Python/Synchronization/)
 
-    - [9.1. Synchronization between Threads ](./References/Section1/Threads%20In%20Python/Synchronization/Synchronization%20Between%20Threads.md)
+    - [9.1. Comparision Between Different Primitives](./References/Section1/Threads%20In%20Python/Synchronization/Comparision%20Between%20Primitives.md)
+        - Tabular Comparision: Lock, RLock, Semaphore, BoundedSemaphore
+        - Semaphore Vs BoundedSemaphore
+
+    - [9.2. Synchronization between Threads](./References/Section1/Threads%20In%20Python/Synchronization/Synchronization%20Between%20Threads.md)
         - Dining philosopher problem and deadlock
+
+
+
+    - [9.3. Synchronization Between Threads](./References/Section1/Threads%20In%20Python/Synchronization/Synchronization%20Between%20Threads.md)
+        - Dining Philosopher Problem
+        - Pythonic Implementation for Dining Philosopher Problem
+    
+    - [9.4. Synchronization Between Threads](./References/Section1/Threads%20In%20Python/Synchronization/Synchronization%20Between%20Threads.md)
+        - Dirty Write
+        - Pythonic Implementation for solution to Dirty Write on Global Resource With Lock
+
+    
