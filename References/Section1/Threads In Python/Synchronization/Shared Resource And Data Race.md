@@ -90,7 +90,60 @@ An RLock (short for Reentrant Lock) in Python is a type of lock that allows a th
 
 - **Avoiding Deadlock:** If a function that acquires a lock calls another function that also tries to acquire the same lock, a regular Lock would cause a deadlock. However, an RLock allows the same thread to continue execution.
 
-**Example1 With Preventing: Dirty Read + Dirty Write:**
+**Example2:**
+
+```python
+import threading
+import time
+
+
+class Worker:
+
+    def __init__(self) -> None:
+        self.a = 1
+        self.b = 1
+        self.rlock = threading.RLock()
+
+    def increament_a(self):
+        self.rlock.acquire()
+        print(f"Modifying A: RLock Acquired: {self.rlock}")
+        self.a = self.a + 1
+        time.sleep(1)
+        self.rlock.release()
+        print(f"Modifying A: RLock Released: {self.rlock}")
+
+    def increament_b(self):
+        self.rlock.acquire()
+        print(f"Modifying A: RLock Acquired: {self.rlock}")
+        self.b = self.b + 1
+        time.sleep(1)
+        self.rlock.release()
+        print(f"Modifying A: RLock Released: {self.rlock}")
+
+    def increament_both(self):
+        self.rlock.acquire()
+        print(f"RLock acquired, modifying A and B: {self.rlock}")
+        self.increament_a()
+        self.increament_b()
+        self.rlock.release()
+        print(f"RLock released, modifying A and B: {self.rlock}")
+
+worker = Worker()
+worker.increament_both()
+
+```
+
+**Output:**
+```sh
+RLock acquired, modifying A and B: <locked _thread.RLock object owner=129616654147712 count=1 at 0x75e2b9f27100>
+Modifying A: RLock Acquired: <locked _thread.RLock object owner=129616654147712 count=2 at 0x75e2b9f27100>
+Modifying A: RLock Released: <locked _thread.RLock object owner=129616654147712 count=1 at 0x75e2b9f27100>
+Modifying A: RLock Acquired: <locked _thread.RLock object owner=129616654147712 count=2 at 0x75e2b9f27100>
+Modifying A: RLock Released: <locked _thread.RLock object owner=129616654147712 count=1 at 0x75e2b9f27100>
+RLock released, modifying A and B: <unlocked _thread.RLock object owner=0 count=0 at 0x75e2b9f27100>
+```
+
+**Example2 With Preventing: Dirty Read + Dirty Write:**
 
 ```python
 import threading
@@ -147,6 +200,47 @@ So, we acquire a lock once when depositing or withdrawing (lock counter = 1) and
 > If A has acquire a lock for two times, then the other thread B cannot acquire a same lock unless A release all the lock or lock counter reaches 0.
 
 
-**Example2: Multiple Locks Modifying Multiple Global Values**
+# Lock VS RLock
 
-Consider a case where we have a two global resources which can be only be accessed by a single entity at a time. 
+```python
+import threading
+import time
+
+
+class Worker:
+
+    def __init__(self) -> None:
+        self.a = 1
+        self.b = 1
+        self.rlock = threading.RLock()
+
+    def increament_a(self):
+        self.rlock.acquire()
+        print(f"Modifying A: RLock Acquired: {self.rlock}")
+        self.a = self.a + 1
+        time.sleep(1)
+        self.rlock.release()
+        print(f"Modifying A: RLock Released: {self.rlock}")
+
+    def increament_b(self):
+        self.rlock.acquire()
+        print(f"Modifying A: RLock Acquired: {self.rlock}")
+        self.b = self.b + 1
+        time.sleep(1)
+        self.rlock.release()
+        print(f"Modifying A: RLock Released: {self.rlock}")
+
+    def increament_both(self):
+        self.rlock.acquire()
+        print(f"RLock acquired, modifying A and B: {self.rlock}")
+        self.increament_a()
+        self.increament_b()
+        self.rlock.release()
+        print(f"RLock released, modifying A and B: {self.rlock}")
+
+worker = Worker()
+worker.increament_both()
+```
+
+In case of code above, if we were to use a regular lock, our program would halt at ``self.increament_a()`` as regular lock can be acquired one and released once, causing the next line ``self.increament_a()`` to halt.
+

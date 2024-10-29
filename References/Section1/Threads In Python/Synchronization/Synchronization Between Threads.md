@@ -12,6 +12,7 @@
     - Fundamenal issues to protect multithreaded applications
 
 
+
 ## Dining Philosophers And Race Condition:
 
 - Famous illustration of synchronization problem that occurs in concurrent systems.

@@ -59,17 +59,12 @@ This section covers the very basics of the threading, multiprocessing, memory an
         - Tabular Comparision: Lock, RLock, Semaphore, BoundedSemaphore
         - Semaphore Vs BoundedSemaphore
 
-    - [9.2. Synchronization between Threads](./References/Section1/Threads%20In%20Python/Synchronization/Synchronization%20Between%20Threads.md)
-        - Dining philosopher problem and deadlock
+    - [9.2. Deadlock and Race Condition](./References/Section1/Threads%20In%20Python/Synchronization/DeadLock%20and%20Race%20Condition.md)
 
+    - [9.2. Synchronization Between Threads](./References/Section1/Threads%20In%20Python/Synchronization/Synchronization%20Between%20Threads.md)
+        - Dining philosopher problem
 
-
-    - [9.3. Synchronization Between Threads](./References/Section1/Threads%20In%20Python/Synchronization/Synchronization%20Between%20Threads.md)
-        - Dining Philosopher Problem
-        - Pythonic Implementation for Dining Philosopher Problem
-    
-    - [9.4. Synchronization Between Threads](./References/Section1/Threads%20In%20Python/Synchronization/Synchronization%20Between%20Threads.md)
-        - Dirty Write
-        - Pythonic Implementation for solution to Dirty Write on Global Resource With Lock
-
-    
+    - [9.3. Shared Resource And Data Race](./References/Section1/Threads%20In%20Python/Synchronization/Shared%20Resource%20And%20Data%20Race.md)
+        - threading.Lock
+        - threading.RLock
+        - Lock vs RLock
