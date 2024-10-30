@@ -1,6 +1,4 @@
-# Semaphore and BoundedSemaphore
-
-## Semaphore:
+# Semaphore:
 
 - Have an internal counter (representing the number of resource), that is increased when it's acquired and decreanted when released.
 
