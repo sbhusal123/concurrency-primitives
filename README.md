@@ -77,3 +77,7 @@ This section covers the very basics of the threading, multiprocessing, memory an
         - Condition class method.
         - Example Implementation with python.
 
+    - [9.5. Semaphores](./References/Section1/Threads%20In%20Python/Synchronization/Semaphore.md)
+
+    - [9.6. BoundedSemaphore](./References/Section1/Threads%20In%20Python/Synchronization/BoundedSemaphore.md)
+
