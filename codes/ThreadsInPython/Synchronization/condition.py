@@ -5,16 +5,16 @@ import time
 
 class Publisher(threading.Thread):
 
-    def __init__(self, integers, condition):
+    def __init__(self, integers, condition, name):
         self.condition = condition
         self.integers = integers
-        threading.Thread.__init__(self)
+        threading.Thread.__init__(self, name=name)
     
     def run(self):
         """
         Publisher acquires a condition, appends integer, notifies and releases
         """
-        while True:
+        for i in range(1, 3):
             integer = random.randint(0, 1000)
             self.condition.acquire()
             print(f"Condition Acquired by Publisher: {self.name}")
@@ -28,10 +28,10 @@ class Publisher(threading.Thread):
 
 class Subscriber(threading.Thread):
 
-    def __init__(self, integers, condition):
+    def __init__(self, integers, condition, name):
         self.integers = integers
         self.condition = condition
-        threading.Thread.__init__(self)
+        threading.Thread.__init__(self, name=name)
     
     def run(self):
         """
@@ -42,8 +42,8 @@ class Subscriber(threading.Thread):
             print(f"Condition acquired by Consumer: {self.name}")
             while True:
                 if self.integers:
-                    integers = self.integers.pop()
-                    print(f"{self.integers} Popped from list by consumer: {self.name}")
+                    integer = self.integers.pop()
+                    print(f"{integer} Popped from list by consumer: {self.name}")
                     break
 
                 print(f"Condition wait by: {self.name}")
@@ -52,4 +52,20 @@ class Subscriber(threading.Thread):
             self.condition.release()
 
 def main():
-    pass
+    integers = []
+    condition = threading.Condition()
+
+    pub1 = Publisher(integers=integers, condition=condition, name="Publisher1")
+    pub1.start()
+
+    sub1 = Subscriber(integers=integers, condition=condition, name="Subscriber1")
+    sub2 = Subscriber(integers=integers, condition=condition, name="Subscriber2")
+    sub1.start()
+    sub2.start()
+
+    pub1.join()
+    sub1.join()
+    sub2.join()
+
+if __name__ == "__main__":
+    main()

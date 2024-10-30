@@ -1,5 +1,7 @@
 # Python Concurrency Primitives:
 
+Some of the reference can be found on the [Book](./book.pdf) starting from page number: 307 on concurrency.
+
 ## Section1:
 
 This section covers the very basics of the threading, multiprocessing, memory and program architecture.
@@ -69,4 +71,9 @@ This section covers the very basics of the threading, multiprocessing, memory an
         - threading.RLock
         - Lock vs RLock
 
-    - [9.4. Conditions and Semaphores](./References/Section1/Threads%20In%20Python/Synchronization/4.%20Conditions%20and%20Semaphores.md)
+    - [9.4. Conditions](./References/Section1/Threads%20In%20Python/Synchronization/Condition.md)
+        - Example Illustration with pseudocode in C.
+        - Key Concepts For Pythonic Implementation
+        - Condition class method.
+        - Example Implementation with python.
+
