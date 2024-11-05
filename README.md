@@ -55,29 +55,29 @@ This section covers the very basics of the threading, multiprocessing, memory an
         - Main Thread: Program Thread: ``threading.main_thread()``
         - Thread naming: ``threading.current_thread().name``, construct thread name initialization.
 
-- [9. Synchronization Primitives](./References/Section1/Threads%20In%20Python/Synchronization/)
+- [9. Synchronization Primitives](./References/Section1/Threads%20In%20Python/Synchronization%20Primitive/)
 
-    - [9.1. Comparision Between Different Primitives](./References/Section1/Threads%20In%20Python/Synchronization/Comparision%20Between%20Primitives.md)
+    - [9.1. Comparision Between Different Primitives](./References/Section1/Threads%20In%20Python/Synchronization%20Primitive/Comparision%20Between%20Primitives.md)
         - Tabular Comparision: Lock, RLock, Semaphore, BoundedSemaphore
         - Semaphore Vs BoundedSemaphore
 
-    - [9.2. Deadlock and Race Condition](./References/Section1/Threads%20In%20Python/Synchronization/DeadLock%20and%20Race%20Condition.md)
+    - [9.2. Deadlock and Race Condition](./References/Section1/Threads%20In%20Python/Synchronization%20Primitive/DeadLock%20and%20Race%20Condition.md)
 
-    - [9.2. Synchronization Between Threads](./References/Section1/Threads%20In%20Python/Synchronization/Synchronization%20Between%20Threads.md)
+    - [9.2. Synchronization Between Threads](./References/Section1/Threads%20In%20Python/Synchronization%20Primitive/Synchronization%20Between%20Threads.md)
         - Dining philosopher problem
 
-    - [9.3. Shared Resource And Data Race](./References/Section1/Threads%20In%20Python/Synchronization/Shared%20Resource%20And%20Data%20Race.md)
+    - [9.3. Shared Resource And Data Race](./References/Section1/Threads%20In%20Python/Synchronization%20Primitive/Shared%20Resource%20And%20Data%20Race.md)
         - threading.Lock
         - threading.RLock
         - Lock vs RLock
 
-    - [9.4. Conditions](./References/Section1/Threads%20In%20Python/Synchronization/Condition.md)
+    - [9.4. Conditions](./References/Section1/Threads%20In%20Python/Synchronization%20Primitive//Condition.md)
         - Example Illustration with pseudocode in C.
         - Key Concepts For Pythonic Implementation
         - Condition class method.
         - Example Implementation with python.
 
-    - [9.5. Semaphores](./References/Section1/Threads%20In%20Python/Synchronization/Semaphore.md)
+    - [9.5. Semaphores](./References/Section1/Threads%20In%20Python/Synchronization%20Primitive//Semaphore.md)
 
-    - [9.6. BoundedSemaphore](./References/Section1/Threads%20In%20Python/Synchronization/BoundedSemaphore.md)
+    - [9.6. BoundedSemaphore](./References/Section1/Threads%20In%20Python/Synchronization%20Primitive/BoundedSemaphore.md)
 
