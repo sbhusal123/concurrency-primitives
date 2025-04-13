@@ -81,3 +81,6 @@ This section covers the very basics of the threading, multiprocessing, memory an
 
     - [9.6. BoundedSemaphore](./References/Section1/Threads%20In%20Python/Synchronization%20Primitive/BoundedSemaphore.md)
 
+    - [9.7. Event](./References/Section1/Threads%20In%20Python/Synchronization%20Primitive/Events.md)
+
+    - [9.8. Barriers](./References/Section1/Threads%20In%20Python/Synchronization%20Primitive/Barriers.md)
